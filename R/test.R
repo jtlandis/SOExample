@@ -3,8 +3,13 @@
 foo <- function() structure(NA, class = "foo")
 
 #' @export
-checkS3 <- function(x){
+fun_failure <- function(x){
   lapply(x, docheck)
+}
+
+#' @export
+fun_success <- function(x){
+  docheck(x)
 }
 
 docheck <- function(x) UseMethod('docheck')
