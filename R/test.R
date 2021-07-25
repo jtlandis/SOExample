@@ -4,7 +4,7 @@ foo <- function() structure(NA, class = "foo")
 
 #' @export
 fun_failure <- function(x){
-  lapply(x, docheck)
+  lapply(list(x), docheck)
 }
 
 #' @export
